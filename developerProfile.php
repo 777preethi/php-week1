@@ -7,6 +7,9 @@
             background:#f5f5f5;
             font-family:Arial;
         }
+        h2{
+            text-align:center;
+        }
     </style>
     <body>
         <?php 
@@ -17,7 +20,7 @@
         $quotes = ["I don't have to be perfect.", "I only have to keep going."];
         ?>
         <div class="container">
-            <h2><center>Welcome Back!!!</center></h2>
+            <h2>Welcome Back!!!</h2>
             <div class="dataContents">
                 <div class="eachData"><b>Name: </b><?php echo $name; ?></div>
                 <div class="eachData"><b>Goal: </b><?php echo $goal; ?></div>
