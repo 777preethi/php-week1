@@ -29,12 +29,12 @@
             padding: 30px;
         }
         .eachData {
-            width: 320px;
+            width: 100%;
             background: white;
             border-radius: 15px;
             padding: 20px;
             box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            transition:0.4s;
+            /* transition:0.4s; */
         }
         .eachData h2{
             color:#2563eb;
@@ -47,10 +47,10 @@
             margin:10px 0;
             line-height:1.6;
         }
-        .eachData:hover{
+        /* .eachData:hover{
             transform:translateY(-8px);
             box-shadow:0 15px 30px rgba(0,0,0,0.2);
-        }
+        } */
         .badge{
             display:inline-block;
             background:#2563eb;
@@ -166,47 +166,15 @@
                 "Years" => 11,
                 "Quote" => "Never stop Learning.",
             ]; 
-            function displayDevelopers($developers)
-            {
-                $totalProfileString = '';
-                foreach ($developers as $developer)
-                {
-                    $totalProfileString .= displayDeveloper($developer);
-                } 
-                echo $totalProfileString;
-            }
-            function displayDeveloper($developer)
-            {
-                $eligibility = '';
-                if($developer["Years"] >= 2) {
-                    $eligibility = 'Eligible';
-                } else {
-                    $eligibility = 'Keep Learning';
-                }
-                $profileString = '';
-                $profileString .= '<div class="eachData"><img src="'.$developer["Profile"].'" class="profileImage">
-                    <h2>'.$developer["Name"].'<br>'.$developer["Experience"].'</h2>
-                    <p><span class="label">Email: </span>'.$developer["Email"].'</p>
-                    <p><span class="label">City: </span>'.$developer["City"].'</p>
-                    <p><span class="label">Experience: </span>'.$developer["Years"].' Years of Experience</p>
-                    <p><span class="label">Goal: </span>'.$developer["Goal"].'</p>
-                    <p><span class="label">Skills: </span>';
-                    $technologyString = '';
-                foreach ($developer["Learning"] as $technology)
-                {
-                    $technologyString .= "<span class='badge'>$technology</span>";
-                }
-                $profileString .= $technologyString.'</p>';
-                $profileString .= '<p class="quote"><span class="label">Quote: </span>"'.$developer["Quote"].'"</p>                    
-                    <p><span class="label">Eligibility: </span>'.$eligibility.'</p>';
-                $profileString .= '<br><br><a href="developerDetails.php" target="_blank"><button class="profileBtn">View Profile</button></a></div>';
-                return $profileString;
+
+            function developerDetails($id) {
+                //
             }
         ?>
         <div class="container">
-            <h2>Developer Profile Card</h2>
+            <h2>Developer Details</h2>
             <div class="dataContents">
-                <?php displayDevelopers($developers); ?>
+                <div class="eachData"></div>
             </div>
         </div>
     </body>
