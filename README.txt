@@ -66,9 +66,14 @@ City
 Skills
 After submission, display the entered details.
 {developerRegisteration.php}
+{developerRegistered.php}
 
 Friday – 31 July, 2026
-Goal: Mini Project
-Build a simple Contact Form with:
-Validation
-Success message
+Goal: Form Validation & Project Refactoring
+Learn:
+Server-side Form Validation
+Error Messages
+Preserving Form Values
+Code Refactoring
+include and require
+Better Project Structure
